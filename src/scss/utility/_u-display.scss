@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use '../../global' as *;
+
+.u-displayMobile {
+  display: none !important;
+  @include m {
+    display: inherit !important;
+  }
+}
+
+.u-displayDesktop {
+  display: none !important;
+  @include d {
+    display: inherit !important;
+  }
+}

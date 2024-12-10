@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+// @function vw_d($px, $design-width: 1440) {
+//   @return calc(100 / $design-width) * $px * 1vw;
+// }
+// @function vw_m($px, $design-width: 375) {
+//   @return calc(100 / $design-width) * $px * 1vw;
+// }
+
+$desktop: 769px;
+$mobile: 768px;
+
+@mixin d {
+  @media screen and (min-width: ($desktop)) {
+    @content;
+  }
+}
+@mixin m {
+  @media screen and (max-width: ($mobile)) {
+    @content;
+  }
+}
